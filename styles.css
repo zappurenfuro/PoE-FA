@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&display=swap'); /* Import a Google Font that's somewhat intimidating */
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #1c1c1c 0%, #0a0a0a 100%); /* Blackish gradient background */
+    color: #fff;
+    font-family: 'Exo 2', sans-serif; /* Intimidating font style */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#calculate-button {
+    background-color: #111;
+    color: #dcdcdc;
+    border: 2px solid #5c5c5c; /* Add a border to the button for definition */
+    padding: 10px 20px;
+    font-size: 20px; /* Slightly larger font size for the button */
+    font-weight: 700; /* Make button text bolder */
+    cursor: pointer;
+    border-radius: 4px;
+    margin-bottom: 30px; /* Add some space above the results */
+    transition: background-color 0.3s ease; /* Transition for the hover effect */
+}
+
+#calculate-button:hover {
+    background-color: #333;
+}
+
+#results {
+    background-color: rgba(20, 20, 20, 0.85); /* Dark semi-transparent background */
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 20px;
+    width: 80%;
+    max-width: 800px; /* Limit the max width of the results box */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+}
+
+.result-item {
+    background-color: #191919; /* Slightly lighter background for each result item */
+    border: 1px solid #333; /* Border for definition */
+    border-radius: 4px;
+    margin-bottom: 10px; /* Space between result items */
+    padding: 10px; /* Padding inside result items */
+}
+
+.result-label {
+    color: #e6e6e6;
+    font-weight: 700; /* Bold label text */
+}
+
+.result-value {
+    color: #f2f2f2;
+    font-weight: 400; /* Regular font weight for values */
+}
