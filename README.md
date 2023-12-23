@@ -5,10 +5,10 @@ Path of Exile Flip Assistance is a web application for Path of Exile that help p
 
 # PoE FA API
 
-The current version can now be accessed by public [here](https://real-plum-ant-sari.cyclic.app/calculate-prices), or by clicking the link below.  
+The current version can now be accessed by public by using PoE FA API  [here](https://real-plum-ant-sari.cyclic.app/calculate-prices), or by clicking the link below.  
 [https://real-plum-ant-sari.cyclic.app/calculate-prices](https://real-plum-ant-sari.cyclic.app/calculate-prices "https://real-plum-ant-sari.cyclic.app/calculate-prices")
 
-PoE FA also have an API for Proxy Server use (if you need it for some reason), you can access it [here](https://poefa.xyz/calculate-prices), or by clicking the link below.
+PoE FA also have an API for Proxy Server use (if you need it for some reason), you can access it [here](https://poefa.xyz/calculate-prices), or by clicking the link below.  
 https://poefa.xyz/calculate-prices
 
 # Usage
