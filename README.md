@@ -9,9 +9,9 @@ Click [here](https://github.com/zappurenfuro/PoE-FA.github.io?tab=readme-ov-file
 The current version can now be accessed by public by using PoE FA API [here](https://api.poefa.xyz/calculate-prices), or by clicking the link below.  
 https://api.poefa.xyz/calculate-prices
 
-The API provides you with a list of items with their respective profit in chaos. PoE FA API is still in development, in the future, you will be able to fetch as much data as you want. For now though, you are restricted with a limited amount of data.
+The API provides you with a list of items with their respective profit in chaos, The API refreshes it's data for every 3 minutes to prevent rate limiting. PoE FA API is still in development, hopefully in the near future, you would be able to fetch as much data as you want, without having any restrictions.
 
-# Usage
+# How To Use?
 
 For public use, simply click [here](https://poefa.xyz/) to start, if that doesn't work, click the link below.  
 [https://poefa.xyz/](https://poefa.xyz/ "https://poefa.xyz/")
