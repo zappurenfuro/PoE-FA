@@ -25,3 +25,14 @@ After that, clicking the **Calculate Prices** button to view the results of item
 
 ![enter image description here](https://i.imgur.com/9Jt96hT.png)
 
+# Item List
+*Here is the list of items that are currently available:*
+| No. | Item | Category |
+|--|--|--|
+| 1. | Chaos Orb | Currency |
+| 2. | Divine Orb | Currency |
+| 3. | The Maven's Writ | Fragments & Invitations |
+| 4. | Screaming Invitation | Fragments & Invitations |
+| 5. | Incandescent Invitation | Fragments & Invitations |
+
+Please note that this is **NOT** a final list, as PoE FA plans to expand it as much as possible.
