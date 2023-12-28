@@ -74,7 +74,7 @@ async function dataProcess(){
     const bulkPayloadIncandescent = createPayload("online", ["divine"], ["incandescent-invitation"], 10);
     const bulkPayloadMaven = createPayload("online", ["divine"], ["the-mavens-writ"], 10);
     const singlePayloadScreaming = createPayload("online", ["chaos"], ["screaming-invitation"], 1);
-    const singlePayloadIncandescent = createPayload("online", ["chaos"], ["incandescent-invitation"], 1);
+    const singlePayloadIncandescent = createPayload("online", ["divine"], ["incandescent-invitation"], 1);
     const singlePayloadMaven = createPayload("online", ["divine"], ["the-mavens-writ"], 1);
 
     // Make requests with delays to prevent rate limiting
@@ -110,7 +110,7 @@ async function dataProcess(){
 
     // Profit calculations
     const profitScreaming = (divinePrice * bulkPriceScreaming) - singlePriceScreaming;
-    const profitIncandescent = (divinePrice * bulkPriceIncandescent) - singlePriceIncandescent;
+    const profitIncandescent = divinePrice * (bulkPriceIncandescent - singlePriceIncandescent);
     const profitMaven = divinePrice * (bulkPriceMaven - singlePriceMaven);
 
     // Compile the results
