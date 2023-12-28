@@ -1,4 +1,4 @@
-# Path of Exile Flip Assistance
+# Path of Exile Flip Assistance ![enter image description here](https://i.imgur.com/5akP1Wl.png)
 
 Path of Exile Flip Assistance is a web application for Path of Exile that help players to get the best experience of *flippin'* and the best price of items to flip.
 
