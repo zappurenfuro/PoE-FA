@@ -2,7 +2,7 @@
 
 Path of Exile Flip Assistance is a web application for Path of Exile that help players to get the best experience of *flippin'* and the best price of items to flip.
 
-Click [here](https://github.com/zappurenfuro/PoE-FA.github.io?tab=readme-ov-file#usage) for more information.
+Click [here](https://github.com/zappurenfuro/PoE-FA.github.io?tab=readme-ov-file#how-to-use) for more information.
 
 # PoE FA API
 
