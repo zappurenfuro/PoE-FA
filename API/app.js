@@ -145,6 +145,13 @@ app.get('/update-cron', async (req, res) => {
 // API endpoint
 app.get('/calculate-prices', async (req, res) => {
     try {
+        // Check if finalResults is empty
+        if (Object.keys(finalResults).length === 0) {
+            console.log("finalResults is empty, triggering update.");
+            // Since finalResults is empty, call dataProcess to update it
+            finalResults = await dataProcess();
+            console.log("Results updated:", finalResults);
+        }
         console.log("Results calculated:", finalResults);
         res.json(finalResults); // Send back the latest data
     } catch (error) {
