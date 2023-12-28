@@ -6,19 +6,18 @@ Click [here](https://github.com/zappurenfuro/PoE-FA.github.io?tab=readme-ov-file
 
 # PoE FA API
 
-The current version can now be accessed by public using PoE FA API [here](https://api.poefa.xyz/calculate-prices), or by clicking the link below.  
-https://api.poefa.xyz/calculate-prices
+The current version is now accessible to the public using the PoE FA API [here](https://api.poefa.xyz/calculate-prices). This API refreshes its data every 3 minutes to prevent rate limiting.
 
-The API provides you with a list of items with their respective profit in chaos, The API refreshes it's data for every 3 minutes to prevent rate limiting. PoE FA API is still in development, hopefully in the near future, you would be able to fetch as much data as you want, without having any restrictions.
+The direct API is also available [here](https://direct.api.poefa.xyz/calculate-prices). With this, you can get the latest data without a 3-minute delay. However, due to rate limitations, you can only access two data points at a time.
+
+The API provides you with a list of items along with their respective profit in chaos orbs. The PoE FA API is still under development. Hopefully, in the near future, you will be able to fetch as much data as you want without any restrictions.
 
 # How To Use?
 
-For public use, simply click [here](https://poefa.xyz/) to start, if that doesn't work, click the link below.  
-[https://poefa.xyz/](https://poefa.xyz/ "https://poefa.xyz/")
+For public use, simply click [here](https://poefa.xyz/) to start.
+Additionally, if you encounter any issues with the [site](https://poefa.xyz/ "https://poefa.xyz/")'s functionality, you can access it through its GitHub hosting [here](https://zappurenfuro.github.io/PoE-FA.github.io/).
 
-Additionally, [https://poefa.xyz/](https://poefa.xyz/ "https://poefa.xyz/") isn't always usable, so instead, you can go to the github hosting [here](https://zappurenfuro.github.io/PoE-FA.github.io/).
-
-After that, clicking the **Calculate Prices** button would give you the results of items with the highest profit margin.
+After that, clicking the **Calculate Prices** button to view the results of items with the highest profit margin.
 
 ![Calculate Prices Button](https://i.imgur.com/FEuShHO.png)
 
