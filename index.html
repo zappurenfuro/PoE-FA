@@ -30,7 +30,7 @@
 				resultsContainer.innerHTML = '';
 
 				// Make the API request
-				const response = await fetch('https://api.poefa.xyz/calculate-prices');
+				const response = await fetch('http://localhost:3000/calculate-prices');
 				
 				// If the response is not ok, throw an error
 				if (!response.ok) {
@@ -46,9 +46,9 @@
 					<div class="result-item"><span class="result-label">Bulk price (Screaming):</span> <span class="result-value">${data.bulk_price_screaming} Divine</span></div>
 					<div class="result-item"><span class="result-label">Bulk price (Incandescent):</span> <span class="result-value">${data.bulk_price_incandescent} Divine</span></div>
 					<div class="result-item"><span class="result-label">Bulk price (Maven):</span> <span class="result-value">${data.bulk_price_maven} Divine</span></div>
-					<div class="result-item"><span class="result-label">Single price (Screaming):</span> <span class="result-value">${data.single_price_screaming} Divine</span></div>
-					<div class="result-item"><span class="result-label">Single price (Incandescent):</span> <span class="result-value">${data.single_price_incandescent} Divine</span></div>
-					<div class="result-item"><span class="result-label">Single price (Maven):</span> <span class="result-value">${data.single_price_maven} Divine</span></div>
+					<div class="result-item"><span class="result-label">Single price (Screaming):</span> <span class="result-value">${data.single_price_screaming} Chaos</span></div>
+					<div class="result-item"><span class="result-label">Single price (Incandescent):</span> <span class="result-value">${data.single_price_incandescent} Chaos</span></div>
+					<div class="result-item"><span class="result-label">Single price (Maven):</span> <span class="result-value">${data.single_price_maven} Chaos</span></div>
 					<div class="result-item"><span class="result-label">Profit Screaming:</span> <span class="result-value">${data.profit_screaming} Chaos</span></div>
 					<div class="result-item"><span class="result-label">Profit Incandescent:</span> <span class="result-value">${data.profit_incandescent} Chaos</span></div>
 					<div class="result-item"><span class="result-label">Profit Maven:</span> <span class="result-value">${data.profit_maven} Chaos</span></div>

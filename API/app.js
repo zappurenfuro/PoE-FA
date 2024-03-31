@@ -60,10 +60,9 @@ function sleep(ms) {
 
 // Data processing
 async function dataProcess(){
-    const url = 'https://www.pathofexile.com/api/trade/exchange/Affliction';
+    const url = 'https://www.pathofexile.com/api/trade/exchange/Necropolis';
     const headers = {
         'Content-Type': 'application/json',
-        // Use your own cookie
         'Cookie': '',
         'User-Agent': 'your-user-agent'
     };
@@ -74,27 +73,27 @@ async function dataProcess(){
     const bulkPayloadIncandescent = createPayload("online", ["divine"], ["incandescent-invitation"], 10);
     const bulkPayloadMaven = createPayload("online", ["divine"], ["the-mavens-writ"], 10);
     const singlePayloadScreaming = createPayload("online", ["chaos"], ["screaming-invitation"], 1);
-    const singlePayloadIncandescent = createPayload("online", ["divine"], ["incandescent-invitation"], 1);
-    const singlePayloadMaven = createPayload("online", ["divine"], ["the-mavens-writ"], 1);
+    const singlePayloadIncandescent = createPayload("online", ["chaos"], ["incandescent-invitation"], 1);
+    const singlePayloadMaven = createPayload("online", ["chaos"], ["the-mavens-writ"], 1);
 
     // Make requests with delays to prevent rate limiting
     const currencyResponseData = await makeRequest(url, headers, currencyPayload);
-    await sleep(3000); // Wait for 3 second
+    await sleep(2000); // Wait for 3 second
 
     const bulkResponseDataScreaming = await makeRequest(url, headers, bulkPayloadScreaming);
-    await sleep(3000); // Wait for 3 second
+    await sleep(2000); // Wait for 3 second
 
     const bulkResponseDataIncandescent = await makeRequest(url, headers, bulkPayloadIncandescent);
-    await sleep(3500); // Wait for 3.5 second
+    await sleep(2500); // Wait for 3.5 second
 
     const bulkResponseDataMaven = await makeRequest(url, headers, bulkPayloadMaven);
-    await sleep(3500); // Wait for 3.5 second
+    await sleep(2500); // Wait for 3.5 second
 
     const singleResponseDataScreaming = await makeRequest(url, headers, singlePayloadScreaming);
-    await sleep(4000); // Wait for 4 second
+    await sleep(3000); // Wait for 4 second
 
     const singleResponseDataIncandescent = await makeRequest(url, headers, singlePayloadIncandescent);
-    await sleep(4000); // Wait for 4 second
+    await sleep(3000); // Wait for 4 second
 
     const singleResponseDataMaven = await makeRequest(url, headers, singlePayloadMaven);
     // No need to sleep here if this is the last request
@@ -110,8 +109,8 @@ async function dataProcess(){
 
     // Profit calculations
     const profitScreaming = (divinePrice * bulkPriceScreaming) - singlePriceScreaming;
-    const profitIncandescent = divinePrice * (bulkPriceIncandescent - singlePriceIncandescent);
-    const profitMaven = divinePrice * (bulkPriceMaven - singlePriceMaven);
+    const profitIncandescent = (divinePrice * bulkPriceIncandescent) - singlePriceIncandescent;
+    const profitMaven = (divinePrice * bulkPriceMaven) - singlePriceMaven;
 
     // Compile the results
     const results = {
