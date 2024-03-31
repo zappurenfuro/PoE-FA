@@ -1,28 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PoE Flip Assistance</title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico?">
-    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="styles.css">
-</head>
-<body>
-    <div class="content">
-        <button id="calculate-button">Calculate Prices</button>
-        <div id="results">
-            <!-- Results will be dynamically inserted here by the script.js -->
-        </div>
-    </div>
 
-    <a href="https://github.com/zappurenfuro/PoE-FA.github.io" id="docs-link" target="_blank">Documentation</a>
-    
-    <script>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>PoE Flip Assistance</title>
+	<link rel="icon" type="image/x-icon" href="favicon.ico?">
+	<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+	<div class="content">
+		<button id="calculate-button">Calculate Prices</button>
+		<div id="results">
+			<!-- Results will be dynamically inserted here by the script.js -->
+		</div>
+	</div>
+
+	<a href="https://github.com/zappurenfuro/PoE-FA.github.io" id="docs-link" target="_blank">Documentation</a>
+
+	<script>
 		async function fetchData() {
 			const resultsContainer = document.getElementById('results');
 			const button = document.getElementById('calculate-button');
-			
+
 			try {
 				// Disable the button and clear previous results
 				button.disabled = true;
@@ -31,7 +33,7 @@
 
 				// Make the API request
 				const response = await fetch('http://localhost:3000/calculate-prices');
-				
+
 				// If the response is not ok, throw an error
 				if (!response.ok) {
 					throw new Error(`HTTP error! status: ${response.status}`);
@@ -42,16 +44,16 @@
 
 				// Create HTML for the results
 				const resultsHtml = `
-					<div class="result-item"><span class="result-label">Divine price:</span> <span class="result-value">${data.divine_price} Chaos</span></div>
-					<div class="result-item"><span class="result-label">Bulk price (Screaming):</span> <span class="result-value">${data.bulk_price_screaming} Divine</span></div>
-					<div class="result-item"><span class="result-label">Bulk price (Incandescent):</span> <span class="result-value">${data.bulk_price_incandescent} Divine</span></div>
-					<div class="result-item"><span class="result-label">Bulk price (Maven):</span> <span class="result-value">${data.bulk_price_maven} Divine</span></div>
-					<div class="result-item"><span class="result-label">Single price (Screaming):</span> <span class="result-value">${data.single_price_screaming} Chaos</span></div>
-					<div class="result-item"><span class="result-label">Single price (Incandescent):</span> <span class="result-value">${data.single_price_incandescent} Chaos</span></div>
-					<div class="result-item"><span class="result-label">Single price (Maven):</span> <span class="result-value">${data.single_price_maven} Chaos</span></div>
-					<div class="result-item"><span class="result-label">Profit Screaming:</span> <span class="result-value">${data.profit_screaming} Chaos</span></div>
-					<div class="result-item"><span class="result-label">Profit Incandescent:</span> <span class="result-value">${data.profit_incandescent} Chaos</span></div>
-					<div class="result-item"><span class="result-label">Profit Maven:</span> <span class="result-value">${data.profit_maven} Chaos</span></div>
+				<div class="result-item"><span class="result-label">Divine price:</span> <a href="https://www.pathofexile.com/trade/exchange/Necropolis/9z28fK" target="_blank" class="result-value">${data.divine_price} Chaos</a></div>
+				<div class="result-item"><span class="result-label">Bulk price (Screaming):</span> <a href="https://www.pathofexile.com/trade/exchange/Necropolis/zdO5Ob2U4" target="_blank" class="result-value">${data.bulk_price_screaming} Divine</a></div>
+				<div class="result-item"><span class="result-label">Bulk price (Incandescent):</span> <a href="https://www.pathofexile.com/trade/exchange/Necropolis/pWOOqJdt0" target="_blank" class="result-value">${data.bulk_price_incandescent} Divine</a></div>
+				<div class="result-item"><span class="result-label">Bulk price (Maven):</span> <a href="https://www.pathofexile.com/trade/exchange/Necropolis/JQr4ZvbIl" target="_blank" class="result-value">${data.bulk_price_maven} Divine</a></div>
+				<div class="result-item"><span class="result-label">Single price (Screaming):</span> <a href="https://www.pathofexile.com/trade/exchange/Necropolis/YqM0zE7tY" target="_blank" class="result-value">${data.single_price_screaming} Chaos</a></div>
+				<div class="result-item"><span class="result-label">Single price (Incandescent):</span> <a href="https://www.pathofexile.com/trade/exchange/Necropolis/4rJ2VRgS9" target="_blank" class="result-value">${data.single_price_incandescent} Chaos</a></div>
+				<div class="result-item"><span class="result-label">Single price (Maven):</span> <a href="https://www.pathofexile.com/trade/exchange/Necropolis/LK2Y6PGun" target="_blank" class="result-value">${data.single_price_maven} Chaos</a></div>
+				<div class="result-item"><span class="result-label">Profit Screaming:</span> <span class="result-value">${data.profit_screaming} Chaos</span></div>
+				<div class="result-item"><span class="result-label">Profit Incandescent:</span> <span class="result-value">${data.profit_incandescent} Chaos</span></div>
+				<div class="result-item"><span class="result-label">Profit Maven:</span> <span class="result-value">${data.profit_maven} Chaos</span></div>
 				`;
 
 				// Display the results
@@ -72,4 +74,5 @@
 	</script>
 
 </body>
+
 </html>
