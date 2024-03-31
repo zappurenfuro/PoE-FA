@@ -60,10 +60,9 @@ function sleep(ms) {
 
 // Data processing
 async function dataProcess(){
-    const url = 'https://www.pathofexile.com/api/trade/exchange/Affliction';
+    const url = 'https://www.pathofexile.com/api/trade/exchange/Necropolis';
     const headers = {
         'Content-Type': 'application/json',
-        // Use your own cookie
         'Cookie': '',
         'User-Agent': 'your-user-agent'
     };
@@ -74,8 +73,8 @@ async function dataProcess(){
     const bulkPayloadIncandescent = createPayload("online", ["divine"], ["incandescent-invitation"], 10);
     const bulkPayloadMaven = createPayload("online", ["divine"], ["the-mavens-writ"], 10);
     const singlePayloadScreaming = createPayload("online", ["chaos"], ["screaming-invitation"], 1);
-    const singlePayloadIncandescent = createPayload("online", ["divine"], ["incandescent-invitation"], 1);
-    const singlePayloadMaven = createPayload("online", ["divine"], ["the-mavens-writ"], 1);
+    const singlePayloadIncandescent = createPayload("online", ["chaos"], ["incandescent-invitation"], 1);
+    const singlePayloadMaven = createPayload("online", ["chaos"], ["the-mavens-writ"], 1);
 
     // Make requests with delays to prevent rate limiting
     const currencyResponseData = await makeRequest(url, headers, currencyPayload);
@@ -110,8 +109,8 @@ async function dataProcess(){
 
     // Profit calculations
     const profitScreaming = (divinePrice * bulkPriceScreaming) - singlePriceScreaming;
-    const profitIncandescent = divinePrice * (bulkPriceIncandescent - singlePriceIncandescent);
-    const profitMaven = divinePrice * (bulkPriceMaven - singlePriceMaven);
+    const profitIncandescent = (divinePrice * bulkPriceIncandescent) - singlePriceIncandescent;
+    const profitMaven = (divinePrice * bulkPriceMaven) - singlePriceMaven;
 
     // Compile the results
     const results = {
