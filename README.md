@@ -6,9 +6,9 @@ Click [here](https://github.com/zappurenfuro/PoE-FA.github.io?tab=readme-ov-file
 
 # PoE FA API
 
-The current version is now accessible to the public using the PoE FA API [here](https://api.poefa.xyz/calculate-prices). This API refreshes its data every 3 minutes to prevent rate limiting.
+The current version is now accessible to the public using the PoE FA API [here](https://api.poefa.xyz/calculate-prices). This API refreshes its data every 2 minutes to prevent rate limiting.
 
-The direct API is also available [here](https://direct.api.poefa.xyz/calculate-prices). With this, you can get the latest data without a 3-minute delay. However, due to rate limitations, you can only access two data points at a time.
+The direct API is also available [here](https://direct.api.poefa.xyz/calculate-prices). With this, you can get the latest data without a 2-minute delay. However, due to rate limitations, you can only access two data points at a time.
 
 The API provides you with a list of items along with their respective profit in chaos orbs. The PoE FA API is still under development. Hopefully, in the near future, you will be able to fetch as much data as you want without any restrictions.
 
